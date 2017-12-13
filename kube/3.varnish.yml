@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: web-cache
-        image: dockerimages/docker-varnish:latest
+        image: jasonyihk/varnish:latest
         env:
         - name: VARNISH_DAEMON_OPTS
           value: max_retries=1
@@ -44,9 +44,9 @@ spec:
         - name: web-cache-port
           containerPort: 80
         resources:
-          limits:
+          requests:
             memory: 256Mi
             cpu: 100m
-          requests:
+          limits:
             memory: 256Mi
             cpu: 300m

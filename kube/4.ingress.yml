@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/tls-acme: "true"
 spec:
   rules:
-  - host: web-demo.lkkhppgdi.com
+  - host: web-demo.lkkhpgdi.com
     http:
       paths:
       - backend:
@@ -16,5 +16,5 @@ spec:
         path: "/"
   tls:
   - hosts:
-    - web-demo.lkkhppgdi.com
-    secretName: web-demo-lkkhppgdi-com-tls
+    - web-demo.lkkhpgdi.com
+    secretName: web-demo-lkkhpgdi-com-tls
