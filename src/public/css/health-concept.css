@@ -1,0 +1,24 @@
+
+#health-concept .page-title .title{
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin:0px;
+  color:#734C1F;
+}
+
+#health-concept .page-title .subtitle{
+  width: 70%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+#health-concept .article .title{
+  padding-bottom: 10px;
+}
+
+#health-concept .article .content{
+  opacity: 0.8;
+  margin: 0;
+}

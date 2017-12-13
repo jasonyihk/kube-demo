@@ -1,0 +1,52 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: demo
+  name: web-cache-service
+  labels:
+    app: web-cache-service
+spec:
+  ports:
+  - name: web-cache-svc-port
+    protocol: TCP
+    port: 80
+    targetPort: web-cache-port
+  selector:
+    app: web-cache
+  type: ClusterIP
+
+---
+
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  namespace: demo
+  name: web-cache
+  labels:
+    app: web-cache
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-cache
+  template:
+    metadata:
+      labels:
+        app: web-cache
+    spec:
+      containers:
+      - name: web-cache
+        image: dockerimages/docker-varnish:latest
+        env:
+        - name: VARNISH_DAEMON_OPTS
+          value: max_retries=1
+        ports:
+        - name: web-cache-port
+          containerPort: 80
+        resources:
+          limits:
+            memory: 256Mi
+            cpu: 100m
+          requests:
+            memory: 256Mi
+            cpu: 300m

@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: demo
+  name: web
+  annotations:
+    kubernetes.io/tls-acme: "true"
+spec:
+  rules:
+  - host: web-demo.lkkhppgdi.com
+    http:
+      paths:
+      - backend:
+          serviceName: web-cache-service
+          servicePort: 80
+        path: "/"
+  tls:
+  - hosts:
+    - web-demo.lkkhppgdi.com
+    secretName: web-demo-lkkhppgdi-com-tls

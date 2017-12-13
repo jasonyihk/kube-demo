@@ -1,0 +1,105 @@
+<?php
+return [
+    'settings' => [
+        'displayErrorDetails' => true, // Set to false in production
+        'addContentLengthHeader' => false, // Allow the web server to send the content-length header
+
+    // View settings
+        'view' => [
+            'template_path' => __DIR__ . '/../templates/',
+            'cache_path' => __DIR__ . '/../cache/',
+            'default_page' => 'health-concept',
+            'available_pages' => [
+                'main_pages' => [
+                    'index',
+                    'health-concept',
+                    'products',
+                    'business-opportunity'
+                ],
+                'sub_pages' => [
+                    'our-news',
+                    'new-page',
+                    'quality-assurance',
+                    'research-and-development',
+                    'product-detail',
+                    'about-infinitus',
+                    'corporate-culture',
+                    'milestone',
+                    'our-health-concept',
+                    'business-opportunity-detail'
+                ],
+                'product-detail' => [
+                    'normal' => [
+                        'royal-lingzhi-plus',
+                        'phytocare-toothpaste-twin-pack',
+                        'qi-premium-nutrient-herbal-essence',
+                        'dried-tangerine-peel-puer-tea',
+                        'b-circulation-aid',
+                        'schisandra-plus',
+                        'vitabelle-hydrating-lotion'
+                    ],
+                    'slide' => [
+                        'beautrio-series'
+                    ]
+                ],
+                'news-detail' => [
+                    'infinitus-cooperates-with-nobel-laureate-to-advance-immune-regulation-with-tcm',
+                    'shanghai-corporate-avenue-3-officially-named-infinitus-tower',
+                    'guangzhou-infinitus-plaza-designed-by-zaha-hadid-breaks-ground',
+                    'infinitus-products-reawarded-quality-labels-by-monde-selection',
+                    'cambridge-infinitus-research-center-officially-founded',
+                    'infinitus-honoured-with-internationally-renowned-quality-awards-by-monde-selection',
+                    'lkk-health-products-group-acquires-landmark-office-building-at-20-fenchurch-street-in-london-for-gbp1.2825-billion',
+                    'infinitus-leads-chinese-herbal-health-product-brands-with-a-brand-value-of-rmb-65.869-billion',
+                ],
+            ]
+        ],
+
+    // Translator settings
+        'translator' => [
+            'locale_path' => __DIR__ . '/../lang/',
+            'default_locale' => 'en',
+            'fallback_locale' => 'en',
+            'locale' => [ // Available locale
+
+                'en',
+                'zh-cn',
+                'fr'
+            ],
+            'files' => [
+                'common',
+                'health-concept',
+                'business-opportunity',
+                'product-detail',
+                'news-detail',
+                'about-infinitus',
+                'corporate-culture',
+                'research-and-development',
+                'business-opportunity-detail',
+                'quality-assurance',
+                'our-health-concept',
+                'our-news',
+                'milestone',
+                'join-now-overlay',
+                'shop-now-overlay',
+                'products',
+                'testimonials'
+            ]
+        ],
+
+    // Monolog settings
+        'logger' => [
+            'name' => 'lkkusweb',
+            'path' => __DIR__ . '/../logs/lkkusweb.log',
+            'level' => \Monolog\Logger::DEBUG
+        ],
+
+    // CaaS API settings
+        'caas' => [
+            'base_uri' => '[CAAS_API]',
+            'api_key' => '[CAAS_API_KEY]',
+            'market' => '[CAAS_API_MARKET]',
+            'enable' => [CAAS_API_ENABLE]
+        ]
+    ]
+];

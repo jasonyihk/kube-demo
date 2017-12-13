@@ -1,0 +1,124 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>eNewsLetter 201707</title>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="/marketing/edm/imageMapResizer.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="text-align:center">
+        <img src="/marketing/edm/edmimg1.jpg" alt="" usemap="#Map" style="width:80%"/>
+        <map name="Map" id="Map">
+            <area alt="" title="" href="#" onclick="gaTracking('1')" shape="rect" coords="20,154,1181,768" />
+            <area alt="" title="" href="#" onclick="gaTracking('2')" shape="rect" coords="21,788,393,1293" />
+            <area alt="" title="" href="#" onclick="gaTracking('3')" shape="rect" coords="411,786,786,1199" />
+            <area alt="" title="" href="#" onclick="gaTracking('4')" shape="rect" coords="804,788,1181,1303" />
+            <area alt="" title="" href="#" onclick="gaTracking('5')" shape="rect" coords="20,1312,392,1705" />
+            <area alt="" title="" href="#" onclick="gaTracking('6')" shape="rect" coords="414,1224,785,1707" />
+            <area alt="" title="" href="#" onclick="gaTracking('7')" shape="rect" coords="805,1331,1182,1711" />
+            <area alt="" title="" href="#" onclick="gaTracking('8')" shape="rect" coords="466,1746,537,1808" />
+            <area alt="" title="" href="#" onclick="gaTracking('9')" shape="rect" coords="570,1744,639,1805" />
+            <area alt="" title="" href="#" onclick="gaTracking('10')" shape="rect" coords="672,1746,740,1812" />
+        </map>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+$(document).ready(function() {
+    $('map').imageMapResize();
+});
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-63091955-4', 'auto');
+ga('send', 'pageview');
+
+function gaTracking(number){
+  switch(number){
+    case '1':
+    ga('send','event','article','click','infinitreasure',
+      {
+        'hitCallback': function() {
+          window.location.href = '/marketing/edm/pdfjsviewer/web/viewer.php?files=201707#page=1';
+        }
+      }
+    );
+    break;
+    case '2':
+    ga('send','event', 'article','click','monde_selection_quality_award',{
+        'hitCallback': function() {
+          window.location.href = '/marketing/edm/pdfjsviewer/web/viewer.php?files=201707#page=2';
+        }
+      });
+    break;
+    case '3':
+    ga('send','event', 'article','click','nobel_laureate',{
+      'hitCallback': function() {
+        window.location.href = '/marketing/edm/pdfjsviewer/web/viewer.php?files=201707#page=3';
+      }
+    });
+    break;
+    case '4':
+    ga('send','event', 'article','click','lkk_129',{
+      'hitCallback': function() {
+        window.location.href = '/marketing/edm/pdfjsviewer/web/viewer.php?files=201707#page=4';
+      }
+    });
+    break;
+    case '5':
+    ga('send','event', 'article','click','editors_pick',{
+      'hitCallback': function() {
+        window.location.href = '/marketing/edm/pdfjsviewer/web/viewer.php?files=201707#page=5';
+      }
+    })
+    break;
+    case '6':
+    ga('send','event', 'article','click','new_business_tools',{
+      'hitCallback': function() {
+        window.location.href = '/marketing/edm/pdfjsviewer/web/viewer.php?files=201707#page=6';
+      }
+    })
+    break;
+    case '7':
+    ga('send','event', 'video','play','infinitus_webniar',{
+      'hitCallback': function() {
+        window.location.href = 'https://www.youtube.com/playlist?list=PLut1Yyb4cx_3gQvUCA5bvyp4jkCoxJFjO';
+      }
+    })
+    break;
+    case '8':
+    ga('send','event', 'social_media','click','facebook',{
+      'hitCallback': function() {
+        window.location.href = 'https://www.facebook.com/InfinitusGlobal/';
+      }
+    })
+    break;
+    case '9':
+    ga('send','event', 'social_media','click','youtube',{
+      'hitCallback': function() {
+        window.location.href = 'https://www.youtube.com/channel/UC5uxocdxk0q08Wjt0W97F_g';
+      }
+    })
+    break;
+    case '10':
+    ga('send','event', 'social_media','click','wechat',{
+      'hitCallback': function() {
+        window.location.href = '/marketing/edm/wechat.html';
+      }
+    })
+    break;
+  }
+}
+</script>
+</html>

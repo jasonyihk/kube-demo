@@ -1,0 +1,45 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [QSA,L]
+
+    RewriteBase /
+    # Check if browser supports WebP images
+    RewriteCond %{HTTP_ACCEPT} image/webp
+
+    # Check if WebP replacement image exists
+    RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+
+    # Serve WebP image instead
+    RewriteRule "(.+)\.(jpe?g|png)$" "_REQUEST_SCHEME_://%{HTTP_HOST}/$1.webp" [T=image/webp,E=accept:1,R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+  Header append Vary Accept env=REDIRECT_accept
+
+  # Workaround for apache adding gzip to etag
+  # https://bz.apache.org/bugzilla/show_bug.cgi?id=45023
+  RequestHeader  edit "If-None-Match" "^\"(.*)-gzip\"$" "\"$1\""
+  Header edit "ETag" "^\"(.*[^g][^z][^i][^p])\"$" "\"$1-gzip\""
+
+  # image cache 0s, must revalidate
+  <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|swf|webp)$">
+    Header set Cache-Control "s-maxage=300,must-revalidate,max-age=0,public"
+  </filesMatch>
+
+  # js/css cache 0s, must revalidate
+  <filesMatch "\.(css|js)$">
+    Header set Cache-Control "s-maxage=300,must-revalidate,max-age=0,public"
+  </filesMatch>
+
+  <filesMatch "\.php$">
+    Header append Cache-Control "s-maxage=300"
+    Header unset Pragma
+  </filesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+</IfModule>

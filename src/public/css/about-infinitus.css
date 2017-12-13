@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.subpage-subtitle {
+  margin: 25px 220px 50px;
+  color: #734C1F;
+  font-size: 20px;
+  line-height: 36px;
+  opacity: 0.8;
+}
+
+.subpage-subtitle>b {
+  color: #be2a27;
+}
+
+.about-us-container .row {
+  /*background-color: #D4BFAA;*/
+  margin:0px;
+}
+
+.about-us-text {
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .subpage-subtitle {
+    margin: 30px 40px 50px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

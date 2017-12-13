@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+#business-opportunity-detail .page-title .title{
+  margin:auto;
+}
+
+.ready-to-start-section .title{
+  margin :0 250px 25px;
+  color: #D3BEAA;
+}
+
+.ready-to-start-section .subtitle{
+  margin: 25px 220px 35px;
+  color: white;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 1px;
+}
+
+.subpage-list {
+  margin: 0 150px 50px;
+  color: #BD2A27;
+  text-align: left;
+  column-count: 2;
+  column-gap: 14.8vw;
+}
+
+.subpage-list-item {
+  position: relative;
+  margin-left: 40px;
+  color: #734C1F;
+  font-size: 20px;
+  line-height: 36px;
+  opacity: 0.8;
+}
+
+.subpage-list-item>b {
+  font-weight:bold;
+}
+
+.subpage-list-item::before {
+  content: "•";
+  position: absolute;
+  left: -40px;
+  color: #BD2A27;
+}
+
+.health-prosperity-container {
+  margin: 73px 0 96px;
+  text-align: center;
+}
+
+.article-content-container {
+  margin: 75px 200px 100px;
+}
+
+.health-prosperity-title {
+  margin: 75px 260px 60px;
+  color: #734C1F;
+  font-size: 44px;
+  line-height: 60px;
+}
+
+.health-prosperity-question-text {
+  margin: 60px 140px;
+  color: #734C1F;
+  font-size: 28px;
+  line-height: 44px;
+}
+
+.health-prosperity-question-text>b {
+  font-weight:bold;
+}
+
+.health-prosperity-answer-text {
+  margin: 60px 150px;
+  color: #BD2A27;
+  font-weight:bold;
+  font-size: 28px;
+}
+
+.health-prosperity-enjoy-title {
+  margin: 60px 170px 100px;
+  color: #734C1F;
+  font-size: 20px;
+  line-height: 36px;
+  opacity: 0.8;
+}
+
+.health-prosperity-enjoy-row {
+  margin: 0 150px 115px
+}
+
+.health-prosperity-enjoy-row:last-child {
+  margin-bottom: 0;
+}
+
+.health-prosperity-enjoy-text {
+  color: #734C1F;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.health-prosperity-enjoy-icon {
+  display: inline-block;
+  margin: 0 auto 30px;
+  background-image: url(../img/business-opportunity-detail/health-and-prosperity-icons.png);
+  background-repeat: no-repeat;
+}
+
+.health-prosperity-enjoy-row:nth-child(2) .health-prosperity-enjoy-container:nth-child(1)>.health-prosperity-enjoy-icon {
+  width: 79px;
+  height: 79px;
+  background-position: -19px -5px;
+}
+
+.health-prosperity-enjoy-row:nth-child(2) .health-prosperity-enjoy-container:nth-child(2)>.health-prosperity-enjoy-icon {
+  width: 115px;
+  height: 86px;
+  background-position: -121px -2px
+}
+
+.health-prosperity-enjoy-row:nth-child(2) .health-prosperity-enjoy-container:nth-child(3)>.health-prosperity-enjoy-icon {
+  width: 63px;
+  height: 86px;
+  background-position: -266px -1px;
+}
+
+.health-prosperity-enjoy-row:nth-child(2) .health-prosperity-enjoy-container:nth-child(4)>.health-prosperity-enjoy-icon {
+  width: 100px;
+  height: 88px;
+  background-position: -368px -1px;
+}
+
+.health-prosperity-enjoy-row:nth-child(3) .health-prosperity-enjoy-container:nth-child(1)>.health-prosperity-enjoy-icon {
+  width: 59px;
+  height: 87px;
+  background-position: -507px 0px;
+}
+
+.health-prosperity-enjoy-row:nth-child(3) .health-prosperity-enjoy-container:nth-child(2)>.health-prosperity-enjoy-icon {
+  width: 89px;
+  height: 89px;
+  background-position: -614px -1px
+}
+
+.health-prosperity-enjoy-row:nth-child(3) .health-prosperity-enjoy-container:nth-child(3)>.health-prosperity-enjoy-icon {
+  width: 120px;
+  height: 74px;
+  background-position: -718px -8px;
+}
+
+.health-prosperity-enjoy-row:nth-child(3) .health-prosperity-enjoy-container:nth-child(4)>.health-prosperity-enjoy-icon {
+  width: 85px;
+  height: 89px;
+  background-position: -855px 0px;
+}
+
+.ready-to-start-container {
+  padding: 68px 0 77px;
+  background-color: #BE2926;
+  text-align: center;
+}
+
+.ready-to-start-title {
+  margin: 0 250px 25px;
+  color: #D3BEAA;
+  font-size: 44px;
+}
+.ready-to-start-title:lang(zh-cn) {
+  letter-spacing:4px;
+}
+.ready-to-start-text {
+  margin: 25px 220px 35px;
+  color: white;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 991px) {
+  .subpage-title {
+    margin: 50px 40px 30px;
+    font-size: 34px;
+    line-height: 36px;
+  }
+  .subpage-subtitle {
+    margin: 30px 40px 50px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .subpage-list {
+    margin: 0 40px;
+    column-count: 1;
+    text-align: center;
+  }
+  .subpage-list-item {
+    margin: 0 0 46px;;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .subpage-list-item::before {
+    top: -20px;
+    left: 50%;
+  }
+  .health-prosperity-container {
+    margin: 40px;
+  }
+
+  .health-prosperity-title {
+    margin: 0 0 30px;
+    font-size: 34px;
+    line-height: 36px;
+  }
+
+  .health-prosperity-question-text {
+    margin: 30px 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .health-prosperity-answer-text {
+    margin: 30px 0;
+    color: #BD2A27;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+  }
+
+  .health-prosperity-enjoy-title {
+    margin: 30px 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .health-prosperity-enjoy-row {
+    margin: 0;
+  }
+  .health-prosperity-enjoy-icon {
+    margin: 50px auto 20px;
+  }
+  .health-prosperity-enjoy-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .ready-to-start-title {
+    margin: 0 0 20px;
+    font-size: 28px;
+  }
+
+  .ready-to-start-text {
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .ready-to-start-container {
+    padding: 30px 40px;
+  }
+}
