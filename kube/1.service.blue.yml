@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: demo
+  name: web-service
+  labels:
+    app: web-service
+spec:
+  ports:
+  - name: web-svc-port
+    protocol: TCP
+    port: 80
+    targetPort: web-port
+  selector:
+    app: web
+    color: blue
+  type: ClusterIP

@@ -11,10 +11,10 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: web-cache-service
+          serviceName: web-service
           servicePort: 80
         path: "/"
   tls:
   - hosts:
     - web-demo.lkkhpgdi.com
-    secretName: web-demo-lkkhpgdi-com-tls
+    secretName: lkkhpgdi-ssl-cert-secret

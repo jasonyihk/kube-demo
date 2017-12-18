@@ -2,11 +2,12 @@ kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
   namespace: demo
-  name: web
+  name: web-green
   labels:
     app: web
+    color: green
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: web
@@ -14,10 +15,11 @@ spec:
     metadata:
       labels:
         app: web
+        color: green
     spec:
       containers:
       - name: web
-        image: jasonyihk/kube-demo:latest
+        image: jasonyihk/kube-demo:green
         ports:
         - name: web-port
           containerPort: 80
@@ -30,4 +32,5 @@ spec:
             cpu: 100m
           limits:
             memory: 256Mi
-            cpu: 500m
+            cpu: 200m
+        imagePullPolicy: Always  

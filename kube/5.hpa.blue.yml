@@ -1,13 +1,13 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: web
+  name: web-blue
   namespace: demo
 spec:
-  maxReplicas: 5
-  minReplicas: 1
+  maxReplicas: 7
+  minReplicas: 2
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: web
+    name: web-blue
   targetCPUUtilizationPercentage: 60
